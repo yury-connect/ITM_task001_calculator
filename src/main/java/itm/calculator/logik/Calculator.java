@@ -43,6 +43,9 @@ public class Calculator {
         } catch (NoSuchElementException e) {
             throw new CalculatorException("\n\tВ строке не хватает аргументов \t//\t " +
                     "There are not enough arguments in the string\n" + e.getMessage());
+        } catch (NumberFormatException e) {
+            throw new CalculatorException("\n\tВведена некорректная строка \t//\t " +
+                    "An incorrect line has been entered\t" + e.getMessage());
         }
         return result;
     }
