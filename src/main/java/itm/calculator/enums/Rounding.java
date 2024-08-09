@@ -29,6 +29,6 @@ public enum Rounding {
 
     @Override
     public String toString() {
-        return name().toLowerCase();
+        return name().toUpperCase();
     }
 }
