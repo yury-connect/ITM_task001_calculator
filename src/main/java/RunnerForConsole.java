@@ -3,7 +3,7 @@ import itm.calculator.inputProcessors.InProc;
 import itm.calculator.inputProcessors.InProcConsole;
 
 
-public class RunFromConsole {
+public class RunnerForConsole {
 
     public static void main(String[] args) {
         InProc inProc = new InProcConsole();

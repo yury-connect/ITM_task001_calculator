@@ -3,7 +3,7 @@ import itm.calculator.Main;
 import java.util.Arrays;
 
 
-public class RunFromArgs {
+public class RunnerForArgs {
 
     public static void main(String[] args) {
         String expression = Arrays.stream(args).reduce((a, b) -> a + " " + b).get();
