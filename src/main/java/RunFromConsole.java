@@ -1,6 +1,6 @@
 import itm.calculator.Main;
-import itm.calculator.inProcessors.InProc;
-import itm.calculator.inProcessors.InProcConsole;
+import itm.calculator.inputProcessors.InProc;
+import itm.calculator.inputProcessors.InProcConsole;
 
 
 public class RunFromConsole {

@@ -1,4 +1,4 @@
-package itm.calculator.inProcessors;
+package itm.calculator.inputProcessors;
 
 import java.util.Scanner;
 

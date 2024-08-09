@@ -7,8 +7,8 @@
   <version>1.0-SNAPSHOT</version>
 
 
-  <name>Archetype - ITM_task001_calculator</name>
-  <url>http://maven.apache.org</url>
+  <name>Archetype - ITM_task001_calculator - test_task</name>
+  <url>https://www.it-mentor.tech/</url>
 
 
   <properties>
@@ -17,13 +17,20 @@
   </properties>
 
 
+
   <dependencies>
+
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.8.2</version>
+      <version>5.11.0-RC1</version>
       <scope>test</scope>
     </dependency>
+
+
   </dependencies>
+
+
 
 </project>
