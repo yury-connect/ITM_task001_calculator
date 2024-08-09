@@ -1,9 +1,10 @@
 package itm.calculator.logik;
 
 import itm.calculator.enums.Operations;
-import itm.calculator.exeptions.IncorrectCalculatorOperationException;
+import itm.calculator.exeptions.CalculatorException;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 
@@ -18,16 +19,32 @@ public class Calculator {
 
 
     public int calculate() {
-        int a = Integer.parseInt(getToken());
-        Operations operation = parseOperation(getToken());
-        int b = Integer.parseInt(getToken());
+        int result;
+        try {
+            int a = Integer.parseInt(getToken());
+            Operations operation = parseOperation(getToken());
+            int b = Integer.parseInt(getToken());
 
-        int result = operation.calculate(a, b);
+            result = operation.calculate(a, b);
+
+            if (tokenLine.hasNext()) {
+                StringBuffer errorMessage = new StringBuffer();
+                errorMessage.append("\n\tВ строке введены лишние аргументы.\n Extra arguments have been entered in the line");
+                while (tokenLine.hasNext()) {
+                    errorMessage.append("\n" + getToken());
+                }
+                throw new CalculatorException(errorMessage.toString());
+            }
+        } catch (NoSuchElementException e) {
+            throw new CalculatorException("\n\tInvalid input.\n В строке не хватает аргументов // " +
+                    "There are not enough arguments in the string\n" + e.getMessage());
+        }
+
         return result;
     }
 
 
-    private String getToken() {
+    private String getToken() throws NoSuchElementException {
         return tokenLine.next();
     }
 
@@ -40,7 +57,8 @@ public class Calculator {
                 .orElse(null);
 
         if (result == null) {
-            throw new IncorrectCalculatorOperationException("Invalid operation: " + token);
+            throw new CalculatorException("\n\tВведена неподдерживаемая операция // " +
+                    "An unsupported operation has been introduced: " + token);
         }
 
         return result;
