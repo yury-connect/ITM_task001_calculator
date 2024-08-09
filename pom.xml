@@ -11,6 +11,34 @@
   <url>https://www.it-mentor.tech/</url>
 
 
+<!--  Описание проекта (<description>):-->
+  <description>This project is a simple calculator implementation for educational purposes.</description>
+
+
+<!--  Разработчики (<developers>):-->
+  <developers>
+    <developer>
+      <id>LapitskiYury</id>
+      <name>Lapitski Yury</name>
+      <email>yury.connect@gmail.com</email>
+      <roles>
+        <role>developer</role>
+        <role>maintainer</role>
+      </roles>
+      <timezone>+2</timezone>
+    </developer>
+  </developers>
+
+
+<!--  Репозитории исходного кода (<scm>)-->
+  <scm>
+    <connection>scm:git:git://github.com/yury-connect/ITM_task001_calculator.git</connection>
+    <developerConnection>scm:git:ssh://github.com/yury-connect/ITM_task001_calculator.git</developerConnection>
+    <url>https://github.com/yourusername/ITM_task001_calculator</url>
+    <tag>HEAD</tag>
+  </scm>
+
+
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
@@ -30,7 +58,6 @@
 
 
   </dependencies>
-
 
 
 </project>
