@@ -15,7 +15,7 @@
   <description>This project is a simple calculator implementation for educational purposes.</description>
 
 
-<!--  Разработчики (<developers>):-->
+  <!--  Разработчики (<developers>):-->
   <developers>
     <developer>
       <id>LapitskiYury</id>
@@ -26,6 +26,11 @@
         <role>maintainer</role>
       </roles>
       <timezone>+2</timezone>
+      <properties>
+        <phone>+375291056708</phone>
+        <viber>+375291056708</viber>
+        <whatsapp>+375291056708</whatsapp>
+      </properties>
     </developer>
   </developers>
 
